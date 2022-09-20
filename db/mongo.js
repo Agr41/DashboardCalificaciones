@@ -5,6 +5,6 @@ const url = 'mongodb+srv://pruebas:admin@clustergeneral.l4wbj.mongodb.net/myFirs
 const client = new MongoClient(url);
 
 
-const dbName = 'cerradaDB';
+const dbName = 'Alumnos';
 
 module.exports = {client, dbName}; 
