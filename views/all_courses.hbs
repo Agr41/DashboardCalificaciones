@@ -66,12 +66,18 @@
                                                             
                     {{#each scores}}
                         {{#with this}}
-                                <p><span><i class="fa fa-clock"></i></span> <b>{{type}}</b>{{score}}</p>
+                                <p><span><i class="fa fa-clock"></i></span> <b>{{type}}: </b>{{score}}</p>
+                                <div class="progress">
+                                            <div class="progress-bar progress-bar-danger ctn-vs-1" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:{{score}}%;"> <span class="sr-only">75% Complete</span></div>
+                                        </div>
                         
 
                         {{/with}}
                     {{/each}}
                     <p><span><i class="fa fa-clock"></i></span> <b>PROMEDIO</b>{{promedio}}</p>
+                    <div class="progress">
+                                            <div class="progress-bar progress-bar-danger ctn-vs-1" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:{{promedio}}%;"> <span class="sr-only">75% Complete</span></div>
+                                        </div>
                     </div>
                             <div class="product-buttons">
                                 <button type="button" class="button-default cart-btn">Read More</button>
