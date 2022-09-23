@@ -28,7 +28,8 @@ async function detalleUsu(id){
             '$project': {
               '_id': 0, 
               'class_id': 1, 
-              'scores': 1
+              'scores': 1,
+              'promedio':1
             }
           }
         ]

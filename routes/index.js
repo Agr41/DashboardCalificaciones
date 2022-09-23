@@ -40,7 +40,20 @@ async function detalleUsu(id){
           }
         ]
       ).toArray();
-      var dato = {arregloMat, promedio}
+      let beca =0;
+      if (promedio >=70){
+        beca = 10
+      }
+      if (promedio >=80){
+        beca =20;
+      }
+      if (promedio >=90){
+        beca =30;
+      }
+      if(promedio == 100){
+        beca = 40;
+      }
+      var dato = {arregloMat, promedio, beca}
       console.log(dato)
       return dato;
   };
@@ -58,7 +71,7 @@ router.get('/',(req, res, next) => {
           detalleUsu(req.user.student_id)
           .then((dato)=>{
             console.log(dato.promedio)
-            res.render('index', { title: "Menú Principal", student_id:req.user.student_id, materias:dato.arregloMat, promedio: dato.promedio[0].x});
+            res.render('index', { title: "Menú Principal", student_id:req.user.student_id, materias:dato.arregloMat, promedio: dato.promedio[0].x, beca:dato.beca});
           })  
           .catch((err)=>{
               console.log(err);
