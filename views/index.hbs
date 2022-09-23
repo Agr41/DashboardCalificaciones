@@ -297,7 +297,11 @@
                                     <li>
                                         
                                         <h2><span class="counter">{{class_id}}</span></h2> <small>N° de materia</small>
-                                        <div class="pull-right">{{promedio}} <i class="fa fa-level-up text-danger ctn-ic-1"></i></div>
+                                        <div class="pull-right">
+                                            <script>
+                                                document.write(Math.round({{promedio}} * 100) / 100);
+                                            </script>
+                                             <i class="fa fa-level-up text-danger ctn-ic-1"></i></div>
                                         <div class="progress">
                                             <div class="progress-bar progress-bar-danger ctn-vs-1" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:{{promedio}}%;"> <span class="sr-only">75% Complete</span></div>
                                         </div>
