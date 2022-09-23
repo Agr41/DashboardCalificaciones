@@ -28,7 +28,7 @@ async function detalleUsu(id){
             '$project': {
               '_id': 0, 
               'student_id': 1, 
-              'promedio': 1
+              'promedio': { $trunc: [ "$promedio", 1 ] }
             }
           }, {
             '$group': {
@@ -36,6 +36,11 @@ async function detalleUsu(id){
               'x': {
                 '$avg': '$promedio'
               }
+            }
+          }, {
+            '$project': {
+              '_id': '$student_id', 
+              'x': { $trunc: [ "$x", 1 ] }
             }
           }
         ]

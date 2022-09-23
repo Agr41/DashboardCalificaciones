@@ -29,7 +29,7 @@ async function detalleUsu(id){
               '_id': 0, 
               'class_id': 1, 
               'scores': 1,
-              'promedio':1
+              'promedio':{ $trunc: [ "$promedio", 1 ] }
             }
           }
         ]
