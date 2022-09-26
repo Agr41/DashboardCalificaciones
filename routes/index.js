@@ -9,8 +9,7 @@ passport.deserializeUser(
     const db = client.db(dbName);
     const collection = db.collection('usuarios');
     collection.findOne({student_id:id}, function (err, user) {
-      done(err, user);
-});
+      done(err, user);});
 });
 
 async function detalleUsu(id){
