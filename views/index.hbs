@@ -290,20 +290,22 @@
                     </div> --}}
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div class="white-box res-mg-t-30 table-mg-t-pro-n">
-                            <h3 class="box-title">Visits from countries</h3>
+                            <h3 class="box-title">CALIFICACIONES</h3>
                             <ul class="country-state">
                                 {{#each materias}}
                                 {{#with this}}
                                     <li>
                                         
-                                        <h2><span class="counter">{{class_id}}</span></h2> <small>N° de materia</small>
+                                        <h2>Materia {{class_id}}</h2> <small>-</small>
                                         <div class="pull-right">
+                                            <span class="pull-right label-success label-3 label">
                                             <script>
                                                 document.write(Math.round({{promedio}} * 100) / 100);
                                             </script>
-                                             <i class="fa fa-level-up text-danger ctn-ic-1"></i></div>
+                                            </span>
+                                            </div>
                                         <div class="progress">
-                                            <div class="progress-bar progress-bar-danger ctn-vs-1" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:{{promedio}}%;"> <span class="sr-only">75% Complete</span></div>
+                                            <div class="progress-bar progress-bar-danger ctn-vs-1" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:{{promedio}}%;"> </div>
                                         </div>
                                     </li>
                                 {{/with}}
@@ -318,16 +320,16 @@
                                 <a href="#"><img src="/images/courses/1.jpg" alt="" /></a>
                                 <h2>Beca</h2>
                             </div>
-                            <div class="courses-alaltic">
+                            {{!-- <div class="courses-alaltic">
                                 <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-clock"></i></span> 1 Year</span>
                                 <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-heart"></i></span> 50</span>
                                 <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-dollar"></i></span> 500</span>
-                            </div>
+                            </div> --}}
                             <div class="course-des">
-                                <p><span><i class="fa fa-clock"></i></span> <b>Promedio</b> {{promedio}}</p>
+                                <p><span><i class="fa fa-clock"></i></span> <b>Promedio: </b><span class="counter">{{promedio}}</span> </p>
                                 <p><span><i class="fa fa-clock"></i></span> <b>Inicio de beca:</b> {{fechas.inicio}}</p>
                                 <p><span><i class="fa fa-clock"></i></span> <b>Fin de beca:</b> {{fechas.fin}}</p>
-                                <p><span><i class="fa fa-clock"></i></span> <b>Porcentaje:</b> {{beca}}</p>
+                                <p><span><i class="fa fa-clock"></i></span> <b>Porcentaje:</b> {{beca}}%</p>
                             </div>
 
                         </div>
