@@ -11,6 +11,7 @@ var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
 var cerrar_sesionRouter = require('./routes/cerrar_sesion');
 var all_coursesRouter = require('./routes/all_courses');
+var password_recoveryRouter = require('./routes/password_recovery');
 
 
 var app = express();
@@ -36,6 +37,7 @@ app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 app.use('/cerrar_sesion', cerrar_sesionRouter);
 app.use('/all_courses', all_coursesRouter);
+app.use('/password_recovery', password_recoveryRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
